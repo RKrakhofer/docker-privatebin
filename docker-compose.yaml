@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  privatebin:
+    build: .
+    container_name: privatebin
+    ports:
+      - "9080:80"
+      - "9081:443"
+    volumes:
+      - ./config/conf.php:/var/www/html/cfg/conf.php
+      - privatebin_data:/var/www/html/data
+    restart: unless-stopped
+
+volumes:
+  privatebin_data:
+    external: true
