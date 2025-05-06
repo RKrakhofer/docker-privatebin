@@ -8,4 +8,4 @@ RUN git clone https://github.com/PrivateBin/PrivateBin.git /var/www/html \
 
 COPY config/conf.php /var/www/html/cfg/conf.php
 
-EXPOSE 80 443
+EXPOSE 80
